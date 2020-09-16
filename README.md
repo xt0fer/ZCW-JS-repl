@@ -9,4 +9,7 @@ code/index.html is main page.
 
 src-noconflict is the distribution from the Ace Editor. (https://github.com/ajaxorg/ace)
 
-
+when you get to the machine, to restart, do a `git pull` of changes,
+and then, `sudo docker ps` and see what the container name is.
+finally, from the source code root, do a `sudo docker restart container_name`
+it should respond with a `container_name` as output.
