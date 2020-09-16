@@ -40,6 +40,7 @@ return _logg.join("\\n") + "\\n";
 //post
 `;
 
+var selectionText = "";
 
 window.addEventListener('message',
 
@@ -73,6 +74,16 @@ function clearConsoleWin() {
     consolewin.clearSelection(); // This will remove the highlight over the text
 }
 
+function selectAllEditor() {
+    editor.selectAll();
+}
+function deleteSelectedCode() {
+    selectionText = editor.getSelection();
+    editor.insert("");
+}
+
 document.getElementById('safe').addEventListener('click', evaluate);
 document.getElementById('clear').addEventListener('click', clearConsoleWin);
+document.getElementById('selall').addEventListener('click', selectAllEditor);
+document.getElementById('clearcode').addEventListener('click', deleteSelectedCode);
 document.getElementById("sandboxed").style.display = "none";

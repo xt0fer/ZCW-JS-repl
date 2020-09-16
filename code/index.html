@@ -38,7 +38,12 @@
                 <h3>
                     <img src='https://www.zipcodewilmington.com/hs-fs/hubfs/SI-Images/press/ZipCode_Logo_tag_CMYK_300x200.jpg?width=300&height=200&name=ZipCode_Logo_tag_CMYK_300x200.jpg' height=100px width=134px /> JavaScript Read-Eval-Print Loop (JS-REPL)
                 </h3>
+                <div class="btn-group" role="group " style="margin: 2px;">
+                    <button class="btn btn-primary btn-sm mr-1" type="button" id='selall'>Select All Code</button>
+                    <button class="btn btn-primary btn-sm" type="button" id='clearcode'>Delete Selected Code</button>
+                </div>
                 <pre id="editor">
+console.log("Hello World!");
 
 function foo(items) {
     for (let i = 0; i < items; i++) 
@@ -50,9 +55,9 @@ function foo(items) {
 foo(3);
 
 </pre>
-                <div class="btn-group" role="group ">
-                    <button class="btn btn-primary" type="button" id='safe'>Run <span class="glyphicon glyphicon-play"></span></button>
-                    <button class="btn btn-primary" type="button" id='clear'>Clear <span class="glyphicon glyphicon-play"></span></button>
+                <div class="btn-group" role="group " style="margin: 2px;">
+                    <button class="btn btn-primary btn-sm mr-1" type="button" id='safe'>Run Javascript <span class="glyphicon glyphicon-play"></span></button>
+                    <button class="btn btn-primary btn-sm" type="button" id='clear'>Clear Output <span class="glyphicon glyphicon-play"></span></button>
                 </div>
                 <pre id="consolewin">
 // console.log() output here
