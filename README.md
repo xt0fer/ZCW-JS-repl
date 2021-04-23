@@ -13,3 +13,9 @@ when you get to the machine, to restart, do a `git pull` of changes,
 and then, `sudo docker ps` and see what the container name is.
 finally, from the source code root, do a `sudo docker restart container_name`
 it should respond with a `container_name` as output.
+
+## Futures
+
+- Gists? able to save and load to gist
+- more better toolbar
+
