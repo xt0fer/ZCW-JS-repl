@@ -14,6 +14,16 @@ No "account" concept in this POC.
 
 ```
 
+Each page would be one problem. The page wouldbe "hard coded" to just run the one problem.
+Then, could we use cookies to track progress thru, for a given browser?
+
+Could this be made Mobile-friendly so people could try it on a phone.
+
+Each problem would have explanatory test, a sample, but incomplete, soln.
+The user has to edit the sample code and press a "test" button to see if it passes or fails.
+
+Each problem could also have one or more "sample solutions".
+
 === Y equals ?
 
 Look at each of these formulas, and determine what *y* is based on substituting the given value of *x*.
