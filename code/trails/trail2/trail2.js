@@ -100,4 +100,63 @@ testassertunary(f, 2, 4);
 `
     },
 
+    {
+        question: 5,
+        award: 10,
+        setuptext: `
+// Make a function that returns the string value "Zip Code" from the given function.
+`,
+        samplecode: `
+
+function f() {
+    return "";
+}
+`,
+        testcases: `
+testassert(f, "Zip Code");
+`
+    },
+    {
+        question: 6,
+        award: 10,
+        setuptext: `
+// Using the JavaScript length method, return the 
+// length of the string "ZipCodeRocks" using the given function.
+`,
+        samplecode: `
+
+function f() {
+    return "".length;
+}
+`,
+        testcases: `
+testassert(f, 12);
+`
+    },
+    {
+        question: 6,
+        award: 10,
+        setuptext: `
+// Using the JavaScript length method, return the 
+// length of the string "ZipCodeRocks" using the given function.
+ 
+// Example 1
+// input: "hello".length
+// output: 5
+ 
+// Example 2
+// input: "Delaware".length
+// output: 8
+`,
+        samplecode: `
+
+function f() {
+return "".length;
+}
+`,
+        testcases: `
+testassert(f, 12);
+`
+    },
+
 ]
