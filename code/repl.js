@@ -77,12 +77,13 @@ function clearConsoleWin() {
 function selectAllEditor() {
     editor.selectAll();
 }
+
 function deleteSelectedCode() {
     selectionText = editor.getSelection();
     editor.insert("");
 }
 
-document.getElementById('safe').addEventListener('click', evaluate);
+document.getElementById('runjs').addEventListener('click', evaluate);
 document.getElementById('clear').addEventListener('click', clearConsoleWin);
 document.getElementById('selall').addEventListener('click', selectAllEditor);
 document.getElementById('clearcode').addEventListener('click', deleteSelectedCode);
