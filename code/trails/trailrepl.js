@@ -29,7 +29,23 @@ var
         console.log("Tests not passed!, Incorrect answer.");
         return false;
     }
-    
+    function testassertbinary(ffun, a1, a2, answ) {
+        if (ffun(a1, a2) === answ) {
+            console.log("Success!");
+            return true;
+        }
+        console.log("Tests not passed!, Incorrect answer.");
+        return false;
+    }
+    function testassertunary(ffun, a1, answ) {
+        if (ffun(a1) === answ) {
+            console.log("Success!");
+            return true;
+        }
+        console.log("Tests not passed!, Incorrect answer.");
+        return false;
+    }
+
     var _logg = [];
     console.log = function() {
         let args = [];
@@ -154,7 +170,6 @@ function initRepl() {
 
     document.getElementById("sandboxed").style.display = "none";
 }
-
 
 window.onload = function() {
     initRepl();
