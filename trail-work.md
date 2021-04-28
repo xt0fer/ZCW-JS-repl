@@ -30,6 +30,8 @@ Look at each of these formulas, and determine what *y* is based on substituting 
 
 ----
 If y = 3x + 5 and x = 2
+
+what is y?
 ----
 
 ****
