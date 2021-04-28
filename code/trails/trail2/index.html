@@ -37,38 +37,32 @@
         <div class="row">
             <div class="col-md-12">
                 <h3>
-                    <img src='https://www.zipcodewilmington.com/hs-fs/hubfs/SI-Images/press/ZipCode_Logo_tag_CMYK_300x200.jpg?width=300&height=200&name=ZipCode_Logo_tag_CMYK_300x200.jpg' height=100px width=134px /> JavaScript Read-Eval-Print Loop (JS-REPL)
+                    <img src='https://www.zipcodewilmington.com/hs-fs/hubfs/SI-Images/press/ZipCode_Logo_tag_CMYK_300x200.jpg?width=300&height=200&name=ZipCode_Logo_tag_CMYK_300x200.jpg' height=100px width=134px />
+                     Trail 2 - Javascript questions
                 </h3>
-                <div class="btn-group" role="group " style="margin: 2px;">
-                    <button class="btn btn-primary btn-sm mr-1" type="button" id='selall'>Select All Code</button>
-                    <button class="btn btn-primary btn-sm" type="button" id='clearcode'>Delete Selected Code</button>
-                </div>
+                <h4 id="currentScore">
+                    Current Score: 0
+                </h4>
                 <pre id="editor">
 console.log("Hello World!");
-
-function foo(items) {
-    for (let i = 0; i < items; i++) 
-    {
-        console.log("Zip Code Rocks " + i + "! "); 
-    }
-}
-
-foo(3);
-
 </pre>
                 <div class="btn-group" role="group " style="margin: 2px;">
-                    <button class="btn btn-primary btn-sm mr-1" type="button" id='runjs'>Run Javascript <span class="glyphicon glyphicon-play"></span></button>
-                    <button class="btn btn-primary btn-sm" type="button" id='clear'>Clear Output <span class="glyphicon glyphicon-play"></span></button>
+                    <button class="btn btn-primary btn-sm mr-1" type="button" id='runjs'>Run Javascript</button>
+                    &nbsp;
+                    <button class="btn btn-primary btn-sm" type="button" id='skipq'>Skip Question</span></button>
+                    &nbsp;
+                    <button class="btn btn-primary btn-sm" type="button" id='nextq'>Next Question</button>
                 </div>
                 <pre id="consolewin">
 // console.log() output here
                 </pre>
-                <iframe sandbox='allow-scripts' id='sandboxed' src='exec.html'></iframe>
+                <iframe sandbox='allow-scripts' id='sandboxed' src='../exec.html'></iframe>
             </div>
         </div>
     </div>
-    <script src="src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
-    <script src="coderepl.js"></script>
+    <script src="../../src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="trail2.js"></script>
+    <script src="../trailrepl.js"></script>
     <footer class="footer">
         <div class="container">
             <span class="text-muted">Copyright, 2020-2021. Zip Code Wilmington, All Rights Reserved.</span>
