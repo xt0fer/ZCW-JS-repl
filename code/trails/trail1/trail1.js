@@ -99,5 +99,133 @@ function f() {
 testassert(f, 3);
 `
     },
+    {
+        question: 4,
+        award: 10,
+        setuptext: `
+// Given the following formula,
+// y = 4x + 5
+// what is y,
+// if x = 2 ?
+
+// edit the line y = 0 and change the 0 to your answer.
+`,
+        samplecode: `
+
+function f() {
+    y = 0;
+    return y;
+}
+`,
+        testcases: `
+testassert(f, 13);
+`
+    },
+    {
+        question: 5,
+        award: 10,
+        setuptext: `
+// Given the following formula,
+// y = 8x + 2
+// what is y, if x = 5?
+
+// edit the line y = 0 and change the 0 to your answer.
+`,
+        samplecode: `
+
+function f() {
+    y = 0;
+    return y;
+}
+`,
+        testcases: `
+testassert(f, 42);
+`
+    },
+    {
+        question: 6,
+        award: 10,
+        setuptext: `
+// Given the following formula,
+// y = 6x - 4
+// what is y, if x = 3?
+
+// edit the line y = 0 and change the 0 to your answer.
+`,
+        samplecode: `
+
+function f() {
+    y = 0;
+    return y;
+}
+`,
+        testcases: `
+testassert(f, 14);
+`
+    },
+    {
+        question: 7,
+        award: 10,
+        setuptext: `
+// Given the following formula,
+// y = 9x + 9
+// what is y,
+// if x = 10 ?
+
+// edit the line y = 0 and change the 0 to your answer.
+`,
+        samplecode: `
+
+function f() {
+    y = 0;
+    return y;
+}
+`,
+        testcases: `
+testassert(f, 99);
+`
+    },
+    {
+        question: 8,
+        award: 10,
+        setuptext: `
+// Given the following formula,
+// y = 14 - 3x + 2
+// what is y, if x = 5?
+
+// edit the line y = 0 and change the 0 to your answer.
+`,
+        samplecode: `
+
+function f() {
+    y = 0;
+    return y;
+}
+`,
+        testcases: `
+testassert(f, 1);
+`
+    },
+    {
+        question: 9,
+        award: 10,
+        setuptext: `
+// Given the following formula,
+// y = 4x + 12 - 3 + 5
+// what is y, if x = 5?
+
+// edit the line y = 0 and change the 0 to your answer.
+`,
+        samplecode: `
+
+function f() {
+    y = 0;
+    return y;
+}
+`,
+        testcases: `
+testassert(f, 34);
+`
+    },
 
 ]
