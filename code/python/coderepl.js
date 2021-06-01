@@ -7,8 +7,7 @@ var editor = ace.edit("editor", {
     minLines: 15
 });
 
-var consolewin = ace.edit("consolewin");
-consolewin.setOptions({
+var consolewin = ace.edit("consolewin", {
     theme: "ace/theme/terminal",
     autoScrollEditorIntoView: true,
     fontSize: 16,
@@ -29,33 +28,6 @@ var postamble = `
 
 var selectionText = "";
 
-window.addEventListener('message',
-
-    function(e) {
-        // Sandboxed iframes which lack the 'allow-same-origin'
-        // header have "null" rather than a valid origin. This means you still
-        // have to be careful about accepting data via the messaging API you
-        // create. Check that source, and validate those inputs!
-        var frame = document.getElementById('sandboxed');
-        if (e.origin === "null" && e.source === frame.contentWindow) {
-            consolewin.setValue(e.data);
-            consolewin.clearSelection(); // This will remove the highlight over the text
-        }
-    });
-
-function evaluate() {
-    var frame = document.getElementById('sandboxed');
-    // var code = document.getElementById('code').value;
-    var code = preamble + editor.getValue() + postamble;
-    clearConsoleWin();
-    //console.log(code);
-    // Note that we're sending the message to "*", rather than some specific
-    // origin. Sandboxed iframes which lack the 'allow-same-origin' header
-    // don't have an origin which you can target: you'll have to send to any
-    // origin, which might alow some esoteric attacks. Validate your output!
-    frame.contentWindow.postMessage(code, '*');
-}
-
 function clearConsoleWin() {
     consolewin.setValue("");
     consolewin.clearSelection(); // This will remove the highlight over the text
@@ -70,8 +42,50 @@ function deleteSelectedCode() {
     editor.insert("");
 }
 
+// output functions are configurable.  This one just appends some text
+// to a pre element.
+function outf(text) {
+    let tt = consolewin.getValue() + text;
+    consolewin.setValue(tt);
+    consolewin.clearSelection();
+}
+
+function builtinRead(x) {
+    if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+        throw "File not found: '" + x + "'";
+    return Sk.builtinFiles["files"][x];
+}
+
+// Here's everything you need to run a python program in skulpt
+// grab the code from your textarea
+// get a reference to your pre element for output
+// configure the output function
+// call Sk.importMainWithBody()
+function runit() {
+    console.log("inside runit");
+    var prog = editor.getValue(); //document.getElementById("editor").value;
+    console.log(prog);
+    clearConsoleWin();
+
+    Sk.configure({
+        output: outf,
+        read: builtinRead,
+        __future__: Sk.python3
+    });
+
+    var myPromise = Sk.misceval.asyncToPromise(function() {
+        return Sk.importMainWithBody("<stdin>", false, prog, true);
+    });
+    myPromise.then(function(mod) {
+            console.log('success');
+        },
+        function(err) {
+            outf(err.toString());
+            console.log(err.toString());
+        });
+}
+
 document.getElementById('runjs').addEventListener('click', runit);
 document.getElementById('clear').addEventListener('click', clearConsoleWin);
 document.getElementById('selall').addEventListener('click', selectAllEditor);
 document.getElementById('clearcode').addEventListener('click', deleteSelectedCode);
-// document.getElementById("sandboxed").style.display = "none";
