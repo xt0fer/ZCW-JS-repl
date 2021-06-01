@@ -1,5 +1,5 @@
 var editor = ace.edit("editor", {
-    theme: "ace/theme/tomorrow_night_blue",
+    theme: "ace/theme/xcode",
     mode: "ace/mode/python",
     autoScrollEditorIntoView: true,
     fontSize: 16,
