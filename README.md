@@ -14,6 +14,12 @@ and then, `sudo docker ps` and see what the container name is.
 finally, from the source code root, do a `sudo docker restart container_name`
 it should respond with a `container_name` as output.
 
+and run local?
+
+```
+python3 -m http.server
+```
+
 ## Futures
 
 - Gists? able to save and load to gist
