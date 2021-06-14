@@ -27,7 +27,7 @@ function whoa(x, y) {
 // then, click the Next Question button.
 `,
         testcases: `
-testassert(whoa, 564);
+testassertbinary(whoa, 1, 0, 564);
 `
     },
     {
