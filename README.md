@@ -24,6 +24,7 @@ python3 -m http.server
 
 - Gists? able to save and load to gist
 - more better toolbar
+- More Trails! Moar!
 
 ## Local development
 
