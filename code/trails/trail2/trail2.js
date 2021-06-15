@@ -3,20 +3,17 @@ let questions = [{
         question: 0,
         award: 0,
         setuptext: `
-// If asked to produce a function that calculated a more complicated expression, perhaps
+// If you are asked to produce a function that calculated a more complicated expression, perhaps
 // ****
 // x + y * 564
 // ****
 // You could just write
-// ----
+// 
 // function whoa(x, y) {
 //         return x + y * 564;
 // }
-// ----
-// Use these as *patterns* to solve the problems below.
-// So, you need to change the 0 below to 11, then click the Run Javascript button
-// to submit your answer for testing.
-// If you get it right, you can click Next Question to move on.
+// 
+// Use these as *patterns* to solve the problems below. If you get it right, you can click Next Question to move on.
 // You can also skip a question, if you're stuck.
 `,
         samplecode: `
