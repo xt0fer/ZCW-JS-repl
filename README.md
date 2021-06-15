@@ -25,3 +25,13 @@ python3 -m http.server
 - Gists? able to save and load to gist
 - more better toolbar
 - More Trails! Moar!
+
+## Local development
+
+rather than uploading to a known server, one can run a local webserver easily with python3.
+do it from inside the code directory, that way `localhost:8000` will act right URL-wise.
+
+```
+cd code
+python3 -m http.server
+```
