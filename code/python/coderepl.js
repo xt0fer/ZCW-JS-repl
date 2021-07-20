@@ -49,8 +49,9 @@ function outf(text) {
     consolewin.setValue(tt);
     consolewin.clearSelection();
     var mypre = document.getElementById("cons");
-    mypre.innerHTML = mypre.innerHTML + text;
-
+    if (mypre !== null) {
+        mypre.innerHTML = mypre.innerHTML + text;
+    }
 }
 
 function builtinRead(x) {
