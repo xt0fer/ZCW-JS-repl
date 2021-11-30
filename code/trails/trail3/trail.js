@@ -31,7 +31,7 @@ testassertbinary(whoa, 2, 2, 20);
         question: 1,
         award: 10,
         setuptext: `
-//Complete the function to calculate multiplication of two input values. x=4 and y=4 should print 16.
+//Complete the function to calculate multiplication of two input values. x=4 and y=4 should return 16.
 //
         
         `,
@@ -48,7 +48,7 @@ testassertbinary(multiply,4,4, 16);
         question: 2,
         award: 10,
         setuptext: `
-// Write a simple function that returns the product of two numbers:  17 * 3
+// Write a simple function that returns the product of two numbers:  51 / 3
 `,
         samplecode: `
 
@@ -57,7 +57,7 @@ function f() {
 }
 `,
         testcases: `
-testassert(f, (17 * 3));
+testassert(f, (51 / 3));
 `
     },
     {
