@@ -10,7 +10,7 @@ let questions = [{
 // You could just write
 // 
 // function whoa(x, y) {
-//         return x + y * 5;
+//         return (x + y) * 5;
 // }
 // 
 // Use these as *patterns* to solve the problems below. If you get it right, you can click Next Question to move on.
@@ -20,7 +20,7 @@ let questions = [{
 function whoa(x, y) {
         return 0;
 }        
-// change the 0 above to (x + y * 5) click the Run Javascript button.
+// change the 0 above to (x + y) * 5 click the Run Javascript button.
 // then, click the Next Question button.
 `,
         testcases: `
