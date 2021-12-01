@@ -128,16 +128,16 @@ testassert(f, 12);
         question: 7,
         award: 20,
         setuptext: `// Write function which takes two numbers (t, f)
-            // The first is the number of touchdowns in a football game
-            // the second is the number of field goals
-            // the function should produce a team's total score
-            // so, if there are 3 touchdowns and 2 field goals, the the total score would be 27
-            `,
+// The first is the number of touchdowns in a football game
+// the second is the number of field goals
+// the function should produce a team's total score
+// so, if there are 3 touchdowns and 2 field goals, the the total score would be 27
+`,
         samplecode: `
 
-            function footballscore(t, f) {
-                return 0;
-            }
+function footballscore(t, f) {
+        return 0;
+}
             `,
         testcases: `
             testassertbinary(footballscore, 3, 2, 27);
@@ -147,15 +147,14 @@ testassert(f, 12);
         question: 8,
         award: 20,
         setuptext: `// Write function which takes a temperature of a room
-            // if the temp is lower than 68, the heater should be turned on.
-            // so the function should return true.
-            // if is the temp >= 68, it should return false.
+// if the temp is lower than 68, the heater should be turned on.
+// so the function should return true.
+// if is the temp >= 68, it should return false.
             `,
         samplecode: `
-
-            function turnOnHeater(temp) {
-                return false;
-            }
+function turnOnHeater(temp) {
+        return false;
+}
             `,
         testcases: `
             testassertunary(turnOnHeater, 77, true);
