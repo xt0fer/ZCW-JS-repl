@@ -13,7 +13,7 @@ let questions = [{
 //         return x + y * 564;
 // }
 // 
-// Use these as *patterns* to solve the problems below. If you get it right, you can click Next Question to move on.
+// Use these as *patterns* to solve the problems below. If you get it right, you can click Next Coding Challenge to move on.
 // You can also skip a question, if you're stuck.
 `,
         samplecode: `
@@ -21,7 +21,7 @@ function whoa(x, y) {
         return 0;
 }        
 // change the 0 above to (x + y  564) click the Run Javascript button.
-// then, click the Next Question button.
+// then, click the Next Coding Challenge button.
 `,
         testcases: `
 testassertbinary(whoa, 2, 2, 1130);

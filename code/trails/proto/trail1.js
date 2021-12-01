@@ -21,7 +21,7 @@ let questions = [{
 // ****
 // So, you need to change the 0 below to 11, then click the Run Javascript button
 // to submit your answer for testing.
-// If you get it right, you can click Next Question to move on.
+// If you get it right, you can click Next Coding Challenge to move on.
 // You can also skip a question, if you're stuck.
 `,
         samplecode: `
@@ -29,7 +29,7 @@ function f() {
     return 0;
 }
 // change the 0 above to 11 and click the Run Javascript button.
-// then, click the Next Question button.
+// then, click the Next Coding Challenge button.
 `,
         testcases: `
 testassert(f, 11);
