@@ -35,3 +35,8 @@ do it from inside the code directory, that way `localhost:8000` will act right U
 cd code
 python3 -m http.server
 ```
+
+## Deployment
+
+Jump to the server, do a `git pull` to fetch changes, the webserver will pick up the changes.
+
